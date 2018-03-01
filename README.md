@@ -61,7 +61,7 @@ imageView.sd_setImage(with: entity.userImageList[index], placeholderImage: img, 
 imageView.kf.setImage(with: imgUrl, placeholder: placeHorderImg) {[weak self] (image: UIImage?, error : Error?, cacheType: CacheType , imageURL :URL?) in
 ```
 
-####这里我编写了一个脚本方便大家对各自负责项目的替换
+####[这里](https://github.com/doreamongit/SDToKF/blob/master/Kingfisher.py)我编写了一个脚本方便大家对各自负责项目的替换
 ###用法
 1.下载```Kingfisher.py```，
 2.赋权
@@ -78,7 +78,6 @@ chmod 777 /Users/damon/Downloads/Kingfisher.py
 >4.2```SDWebImageOptions(rawValue:0)```这样的```SDWebImageOptions```未处理
 >4.3由于Kingfisher的```KingfisherOptionsInfoItem```枚举不包含```SDWebImageRetryFailed```类型，所以检测设置```SDWebImageOptions.retryFailed```或```.retryFailed```的地方对应换成了```空字符串```
 >4.4```SDWebImageOptions.refreshCached```或```.refreshCached```对应换成了```[.forceRefresh]```
-
 
 
 
