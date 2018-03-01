@@ -5,12 +5,6 @@ import re
 import fileinput
 import sys
 
-# filePath = "/Users/damon/Documents/work/program/iOS/sunland/sdjgactivityoperationproject"
-
-# filePath = "/Users/damon/Documents/work/program/iOS/sunland/sdjgmessageproject"
-
-# filePath = "/Users/damon/Documents/work/program/iOS/sunland/sdjgcommunityproject"
-
 filePath = sys.argv[1]
 
 allFilePathAry = []
