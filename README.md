@@ -63,7 +63,7 @@ imageView.kf.setImage(with: imgUrl, placeholder: placeHorderImg) {[weak self] (i
 
 ####[这里](https://github.com/doreamongit/SDToKF/blob/master/Kingfisher.py)我编写了一个脚本方便大家对各自负责项目的替换
 ###用法
-1.下载```Kingfisher.py```，
+1.下载[Kingfisher.py](https://github.com/doreamongit/SDToKF/blob/master/Kingfisher.py)，
 2.赋权
 ```
 chmod 777 /Users/damon/Downloads/Kingfisher.py
@@ -75,7 +75,7 @@ chmod 777 /Users/damon/Downloads/Kingfisher.py
 ```
 4.使用```Kingfisher.py```脚本的问题汇总
 >4.1由于脚本是基于```fileinput```库一行行读取文本的，所以如果要替换的```sd_setImage...```函数包含```换行```的话会失败
->4.2```SDWebImageOptions(rawValue:0)```这样的```SDWebImageOptions```未处理
+>4.2```SDWebImageOptions(rawValue:0)```这样的```SDWebImageOptions```未处理，需自己手动删掉
 >4.3由于Kingfisher的```KingfisherOptionsInfoItem```枚举不包含```SDWebImageRetryFailed```类型，所以检测设置```SDWebImageOptions.retryFailed```或```.retryFailed```的地方对应换成了```空字符串```
 >4.4```SDWebImageOptions.refreshCached```或```.refreshCached```对应换成了```[.forceRefresh]```
 

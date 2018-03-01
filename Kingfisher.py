@@ -55,31 +55,29 @@ def showAllPath():
 		print path	
 
 def handleText(text):
-	if "sd_setImage" in text: 
-		text = re.sub("sd_setImage","kf.setImage",text)
-		text = re.sub("placeholderImage","placeholder",text)
-		text = re.sub("completed","completionHandler",text)
-		text = re.sub("SDImageCacheType","CacheType",text)
-		if "SDWebImageOptions.cacheMemoryOnly" in text:
-			text = re.sub("SDWebImageOptions.cacheMemoryOnly","[.cacheMemoryOnly]",text)
-		else:
-			text = re.sub(".cacheMemoryOnly","[.cacheMemoryOnly]",text)
-		if "SDWebImageOptions.retryFailed" in text:
-			text = re.sub(", options:  SDWebImageOptions.retryFailed","",text)
-			text = re.sub(", options: SDWebImageOptions.retryFailed","",text)
-			text = re.sub(",options: SDWebImageOptions.retryFailed","",text)
-			text = re.sub(", options:SDWebImageOptions.retryFailed","",text)
-			text = re.sub(",options:SDWebImageOptions.retryFailed","",text)
-		else:
-			text = re.sub(", options: .retryFailed","",text)
-			text = re.sub(",options: .retryFailed","",text)
-			text = re.sub(", options:.retryFailed","",text)
-			text = re.sub(",options:.retryFailed","",text)
-		if "SDWebImageOptions.refreshCached" in text:
-			text = re.sub("SDWebImageOptions.refreshCached","[.forceRefresh]",text)
-		else:
-			text = re.sub(".refreshCached","[.forceRefresh]",text)
-	print text.rstrip("\n")
+	text = re.sub("sd_setImage","kf.setImage",text)
+	text = re.sub("placeholderImage","placeholder",text)
+	text = re.sub("completed","completionHandler",text)
+	text = re.sub("SDImageCacheType","CacheType",text)
+	if "SDWebImageOptions.cacheMemoryOnly" in text:
+		text = re.sub("SDWebImageOptions.cacheMemoryOnly","[.cacheMemoryOnly]",text)
+	else:
+		text = re.sub(".cacheMemoryOnly","[.cacheMemoryOnly]",text)
+	if "SDWebImageOptions.retryFailed" in text:
+		text = re.sub(", options:  SDWebImageOptions.retryFailed","",text)
+		text = re.sub(", options: SDWebImageOptions.retryFailed","",text)
+		text = re.sub(",options: SDWebImageOptions.retryFailed","",text)
+		text = re.sub(", options:SDWebImageOptions.retryFailed","",text)
+		text = re.sub(",options:SDWebImageOptions.retryFailed","",text)
+	else:
+		text = re.sub(", options: .retryFailed","",text)
+		text = re.sub(",options: .retryFailed","",text)
+		text = re.sub(", options:.retryFailed","",text)
+		text = re.sub(",options:.retryFailed","",text)
+	if "SDWebImageOptions.refreshCached" in text:
+		text = re.sub("SDWebImageOptions.refreshCached","[.forceRefresh]",text)
+	else:
+		text = re.sub(".refreshCached","[.forceRefresh]",text)
 
 def addImport(path):
 	lines = fileinput.input(path,inplace=True)
